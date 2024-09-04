@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="section-login vh-200 gradient-custom ">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                    
+                    <div class="criar mb-4">
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" id="typeNomeX" class="form-control form-control-lg" />
+                            <label class="form-label" for="typeNomeX">Nome</label>
+                        </div>
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" id="typeTelefoneX" class="form-control form-control-lg" />
+                            <label class="form-label" for="typeTelefoneX">Telefone</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-outline form-white mb-4">
+                        <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                        <label class="form-label" for="typeEmailX">Email</label>
+                    </div>
+        
+                    <div class="form-outline form-white mb-4">
+                        <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                        <label class="form-label" for="typePasswordX">Password</label>
+                    </div>
+                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+      
+                    <button class="btn btn-outline-light btn-lg px-5" type="text" onclick="logar()">Login</button>
+                    <button class="btn btn-outline-light btn-lg px-5" type="text" onclick="criar()">Create</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="section-body vh-300 gradient-custom">
+        <div class="container py-5 h-00">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-light text-dark" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <div class="header d-flex justify-content-between align-items-center mb-4">
+                                
+                                <div class="btn-perfil" onclick="opcaoLogin()">
+                                    <img src="perfil.png" alt="Perfil" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
+                                </div>
+
+                                <div class="aaaa" id="opcoes">
+                                    <button class="opcao">Cotas</button>
+                                    <br>
+                                    <button class="opcao" onclick="logout()">Sair</button>
+                                </div>
+                                
+                                <h1 class="h4">Título</h1>
+                                <div class="btn-noti">
+                                    <img src="notificacao.png" alt="Notificações" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
+                                </div>
+                            </div>
+
+                            <div class="banner mb-4">
+                                <img src="banner.JPG" alt="Banner" class="img-fluid">
+                            </div>
+
+                            <h1 class="h4">Pagamento via Pix</h1>
+                            <button id="generate-payment" class="btn btn-success btn-lg mb-4">Gerar QR Code</button>
+
+                            <div id="qr-code-container" class="mb-4"></div>
+
+                            <p class="h5">Valor da Cota</p>
+                            <p class="h3 text-success">R$ 2,00</p>
+
+                            <h1 class="h4">Promoções</h1>
+                            <div class="d-flex flex-wrap justify-content-between mb-4">
+                                <div class="promo-item  p-3 rounded mb-2 ">
+                                    <p class="">01 por R$2,00</p>
+                                </div>
+                                <div class="promo-item  p-3 rounded mb-2 ">
+                                    <p>05 por R$10,00</p>
+                                </div>
+                                <div class="promo-item  p-3 rounded mb-2 ">
+                                    <p>10 por R$20,00</p>
+                                </div>
+                                <div class="promo-item  p-3 rounded mb-2 ">
+                                    <p>20 por R$40,00</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-4">
+                                <button class="btn btn-success btn-lg">Ver Minhas Cotas</button>
+                                <button class="btn btn-success btn-lg">Cotas Premiadas</button>
+                            </div>
+
+                            <h2 class="h4 mb-4">Selecione a quantidade de Cotas</h2>
+                            <div class="d-flex flex-wrap justify-content-between mb-4">
+                                <div class="quantidade-item  p-3 rounded mb-2">
+                                    <p>+10</p>
+                                </div>
+                                <div class="quantidade-item  p-3 rounded mb-2">
+                                    <p>+20</p>
+                                </div>
+                                <div class="quantidade-item  p-3 rounded mb-2">
+                                    <p>+30</p>
+                                </div>
+                                <div class="quantidade-item  p-3 rounded mb-2">
+                                    <p>+40</p>
+                                </div>
+                            </div>
+
+                            <input type="text" placeholder="Quantidade" id="quantidade-cotas" class="form-control mb-4">
+
+                            <p class="mb-2">Valor R$:</p>
+                            <div id="paymentBrick_container" class="mb-4"></div>
+                            <button class="btn btn-success btn-lg" id="comprar">Comprar Cotas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="banco.js"></script>
+</body>
+</html>
